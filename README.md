@@ -36,13 +36,12 @@ node --test tests/acceptance.test.mjs
 
 ## Скриншоты
 
-Места для скриншотов оставлены явно, поскольку изображения не входят в доступные материалы проекта:
-
-МЕСТО ДЛЯ СКРИНШОТА — Direct, интерфейс на ширине 390 px
-
-МЕСТО ДЛЯ СКРИНШОТА — With-spec, интерфейс на ширине 390 px
-
-МЕСТО ДЛЯ СКРИНШОТА — With-spec, результат OpenSpec 15/15 и ручная проверка
+Direct:
+<img width="1511" height="867" alt="image" src="https://github.com/user-attachments/assets/e0ab4f8e-da94-4d57-95c8-1658c0e0ece1" />
+<img width="893" height="901" alt="image" src="https://github.com/user-attachments/assets/08a6e90e-9e18-46dc-8388-5c69b550301f" />
+With Spec:
+<img width="1507" height="838" alt="image" src="https://github.com/user-attachments/assets/06995c44-6720-47d5-bd55-0a8a5a83c2ad" />
+<img width="890" height="879" alt="image" src="https://github.com/user-attachments/assets/943cdf2b-1026-4b99-b663-6489b989ee8c" />
 
 ## Состав
 
