@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Трекер учебных задач</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="tracker">
+      <h1>Трекер учебных задач</h1>
+
+      <section class="metrics" aria-label="Сводные показатели">
+        <div class="metric"><span>Всего</span><strong id="total-hours">0 ч</strong></div>
+        <div class="metric"><span>Готово</span><strong id="done-hours">0 ч</strong></div>
+        <div class="metric"><span>Прогресс</span><strong id="progress">0%</strong></div>
+      </section>
+
+      <section aria-labelledby="add-task-title">
+        <h2 id="add-task-title">Новая задача</h2>
+        <form id="task-form" novalidate>
+          <div class="field">
+            <label for="task-title">Название</label>
+            <input id="task-title" name="title" type="text" aria-describedby="title-error">
+            <p id="title-error" class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="task-hours">Часы</label>
+            <input id="task-hours" name="hours" type="number" min="0.5" max="24" step="0.5" aria-describedby="hours-error">
+            <p id="hours-error" class="error" aria-live="polite"></p>
+          </div>
+          <button type="submit">Добавить задачу</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="tasks-title">
+        <h2 id="tasks-title">Задачи</h2>
+        <div class="filters" role="group" aria-label="Фильтр задач">
+          <button type="button" data-filter="all">Все</button>
+          <button type="button" data-filter="active">Активные</button>
+          <button type="button" data-filter="done">Готовые</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-state" class="empty-state" hidden>Задач пока нет.</p>
+      </section>
+    </main>
+
+    <script type="module" src="app.mjs"></script>
+  </body>
+</html>

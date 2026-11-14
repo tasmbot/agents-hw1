@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Трекер учебных задач</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="tracker">
+      <h1>Учебные задачи на неделю</h1>
+
+      <section class="summary" aria-label="Общий прогресс">
+        <p>Всего: <strong id="total-hours">0</strong> ч</p>
+        <p>Готово: <strong id="done-hours">0</strong> ч</p>
+        <p>Прогресс: <strong id="progress">0%</strong></p>
+      </section>
+
+      <section aria-labelledby="add-task-heading">
+        <h2 id="add-task-heading">Новая задача</h2>
+        <form id="task-form" novalidate>
+          <div class="field">
+            <label for="task-title">Название</label>
+            <input id="task-title" name="title" type="text" autocomplete="off">
+            <p id="title-error" class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="task-hours">Часы</label>
+            <input id="task-hours" name="hours" type="number" min="0.5" max="24" step="0.5" inputmode="decimal">
+            <p id="hours-error" class="error" aria-live="polite"></p>
+          </div>
+          <button type="submit">Добавить задачу</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">Список задач</h2>
+        <div id="filters" class="filters" aria-label="Фильтры задач">
+          <button type="button" data-filter="all" class="selected" aria-pressed="true">Все</button>
+          <button type="button" data-filter="active" aria-pressed="false">Активные</button>
+          <button type="button" data-filter="done" aria-pressed="false">Готовые</button>
+        </div>
+        <ul id="task-list" aria-live="polite"></ul>
+      </section>
+    </main>
+    <script type="module" src="app.mjs"></script>
+  </body>
+</html>
